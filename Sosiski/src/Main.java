@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Hotdog> hotdogs = new ArrayList<Hotdog>();
         HotDogMaker maker = new HotDogMaker();
-        hotdogs.add(maker.MakeBerlinka());
-        hotdogs.add(maker.MakeMasterDog());
-        hotdogs.add(maker.MakeMasterDog());
+        hotdogs.add(maker.MakeBerlinka(1));
+        hotdogs.add(maker.MakeMasterDog(2));
+        hotdogs.add(maker.MakeMasterDog(3));
         CalcTotalPrice(hotdogs);
         CalcHotdogSpecies(hotdogs);
 
