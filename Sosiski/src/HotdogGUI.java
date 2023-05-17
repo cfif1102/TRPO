@@ -1,7 +1,6 @@
-//package Hotdog;
 import java.util.ArrayList;
 import java.util.List;
-public class RepClass {
+public class Repository {
     private List<Hotdog> hotdogs = new ArrayList<>();
 
     public void addHotdog(Hotdog hotdog) {
@@ -20,17 +19,15 @@ public class RepClass {
         return null;
     }
 
-    public List<Hotdog> getHotdogs() {
-        return hotdogs;
+    public List<Pizza> getPizzas() {
+        return pizzas;
     }
 
-    public void updateHotdog(Hotdog dogBefore, Hotdog dogAfter) {
-        int index = 0;
-        for(Hotdog dog:hotdogs){
-            index++;
-            if(dog.equals(dogBefore)) {
-                hotdogs.set(index, dogAfter);
-            }
+    public void updatePizza(Pizza oldPizza, Pizza newPizza) {
+        int index = pizzas.indexOf(oldPizza);
+        if (index >= 0) {
+            pizzas.set(index, newPizza);
         }
     }
+
 }

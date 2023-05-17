@@ -9,7 +9,7 @@ public class HotDogMaker
     private double BeafSausagePrice = 2;
     private double MayoPrice = 0.5;
     private double MustardPrice = 0.5;
-    public HunterDog MakeHunterDog()
+    public HunterDog MakeHunterDog(int id)
     {
         ArrayList<Ingridient> ingridients = new ArrayList<>();
 
@@ -18,12 +18,12 @@ public class HotDogMaker
         ingridients.add(new Mayo(MayoPrice));
         ingridients.add(new Bun(BunPrice));
 
-        HunterDog hunterDog = new HunterDog(ingridients);
+        HunterDog hunterDog = new HunterDog(ingridients,id);
 
         return hunterDog;
     }
 
-    public Berlinka MakeBerlinka()
+    public Berlinka MakeBerlinka(int id)
     {
         ArrayList<Ingridient> ingridients = new ArrayList<>();
 
@@ -33,12 +33,12 @@ public class HotDogMaker
         ingridients.add(new ChickenSausage(ChickenSausagePrice));
         ingridients.add(new Mayo(MayoPrice));
 
-        Berlinka berlinka = new Berlinka(ingridients);
+        Berlinka berlinka = new Berlinka(ingridients, id);
 
         return berlinka;
     }
 
-    public MasterDog MakeMasterDog()
+    public MasterDog MakeMasterDog(int id)
     {
         ArrayList<Ingridient> ingridients = new ArrayList<>();
 
@@ -48,7 +48,7 @@ public class HotDogMaker
         ingridients.add(new BeafSausage(BeafSausagePrice));
         ingridients.add(new Mayo(MayoPrice));
 
-        MasterDog masterDog = new MasterDog(ingridients);
+        MasterDog masterDog = new MasterDog(ingridients,id);
 
         return masterDog;
     }
