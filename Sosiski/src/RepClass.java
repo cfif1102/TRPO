@@ -1,10 +1,28 @@
-//package Hotdog;
 import java.util.ArrayList;
 import java.util.List;
 public class RepClass {
     private List<Hotdog> hotdogs = new ArrayList<>();
+    private HotDogMaker maker = new HotDogMaker();
 
-    public void addHotdog(Hotdog hotdog) {
+    public void addHotdog(String hotdogtype) {
+        Hotdog hotdog = null;
+
+        switch(hotdogtype)
+        {
+            case "Берлинка":
+                hotdog = maker.MakeBerlinka(hotdogs.size() + 1);
+
+                break;
+            case "Мастер":
+                hotdog = maker.MakeMasterDog(hotdogs.size() + 1);
+
+                break;
+            case "Хантер":
+                hotdog = maker.MakeHunterDog(hotdogs.size() + 1);
+
+                break;
+        }
+
         hotdogs.add(hotdog);
     }
 
@@ -33,4 +51,5 @@ public class RepClass {
             }
         }
     }
+
 }
